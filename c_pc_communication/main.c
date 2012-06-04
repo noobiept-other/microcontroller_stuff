@@ -62,6 +62,30 @@ UDR0 = data;
 
 
 /*
+    Transmits a c-style string
+ */
+
+void transmitMessage( char* message )
+{
+int i = 0;
+
+    // send character by character until it finds a '\0' (end of string)
+for ( ; (message[i] != '\0') ; i++)
+    {
+    transmit( message[i] );
+
+        // you could optionally, limit the maximum number of characters to be sent
+        // in each transmit (also good for making sure the program doesn't get stuck here,
+        // in case a non terminated string is sent)
+    if ( i > 20 )
+        {
+        break;
+        }
+    }
+}
+
+
+/*
     The RXCn flag tells if there's unread data in the receive buffer
  */
 
@@ -91,7 +115,6 @@ int main(void)
 initPcCommunication();
 
 
-int i = 0;
 char a[7] = " 1234 ";   // some dummy text
 
 while(1)
@@ -100,11 +123,7 @@ while(1)
         {
         transmit( getData() );
 
-
-        for (i = 0 ; i < 6 ; i++)
-            {
-            transmit( a[i] );
-            }
+        transmitMessage( a );
         }
     }
 
