@@ -1,9 +1,10 @@
-Control an LED with a light-dependent resistor (LDR)
-====================================================
+# Control an LED with a light-dependent resistor (LDR) #
 
 
-[LDR Schematic](http://nbpt.eu/static/random/microcontroller_stuff/ldr_schematic.png) [LED Schematic](http://nbpt.eu/static/random/microcontroller_stuff/led_schematic.png)
+![LDR Schematic](assembly_adc_ldr_pwm_led/fotos_videos/ldr_schematic.png)
 
-![Circuit](http://nbpt.eu/static/random/microcontroller_stuff/circuito.JPG "Circuit")    
+![LED Schematic](assembly_adc_ldr_pwm_led/fotos_videos/led_schematic.png)
 
-[Video](http://nbpt.eu/static/random/microcontroller_stuff/demo.AVI)
+![Circuit](assembly_adc_ldr_pwm_led/fotos_videos/circuito.JPG "Circuit")
+
+[Video](assembly_adc_ldr_pwm_led/fotos_videos/demo.AVI)
